@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>일반 사용자용 페이지-메인</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="page">
+      <header>
+        <button type="button">
+          <img src="lock.png" alt="ADMIN 로그인" onclick="" />
+          <a href="관리자 로그인창" style="font-size: 20px">ADMIN</a>
+        </button>
+        <nav>
+          <ul>
+            <div class="middle">
+              <li><span>바비백화점</span></li>
+            </div>
+            <li><span>team 연결고리</span></li>
+          </ul>
+        </nav>
+      </header>
+    </div>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="search-bar">
+          <input type="text" placeholder="매장 이름을 입력하세요" />
+          <button class="search-button">&#128269;</button>
+        </div>
+        <ul class="floor-list">
+          <li class="floor-item" onclick="selectFloor(this, '4-floor.png')">
+            4 floor
+          </li>
+          <li class="floor-item" onclick="selectFloor(this, '3-floor.png')">
+            3 floor
+          </li>
+          <li class="floor-item" onclick="selectFloor(this, '2-floor.png')">
+            2 floor
+          </li>
+          <li
+            class="floor-item active"
+            onclick="selectFloor(this, '1-floor.png')"
+          >
+            1 floor
+          </li>
+          <li class="floor-item" onclick="selectFloor(this, 'b1-floor.png')">
+            B1 floor
+          </li>
+          <li class="floor-item" onclick="selectFloor(this, 'b2-floor.png')">
+            B2 floor
+          </li>
+        </ul>
+        <div class="help-request">
+          <button class="help-button">도움 요청</button>
+        </div>
+        <div class="admin-code">
+          <input type="text" id="adminCode" placeholder="관리자번호 입력" />
+          <button class="confirm-button" onclick="checkAdminCode()">
+            확인
+          </button>
+        </div>
+      </aside>
+      <main class="map-container">
+        <img
+          id="mapImage"
+          src="1-floor.png"
+          alt="Floor Map"
+          class="map-image"
+        />
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>

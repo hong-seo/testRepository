@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>관리자 페이지</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <aside class="sidebar">
+        <div class="header">
+          <h2>XX 백화점</h2>
+        </div>
+        <ul class="menu">
+          <li class="menu-item active" onclick="showSection('sensor-data')">
+            실시간 센서 데이터
+          </li>
+          <li class="menu-item" onclick="showSection('node-info')">
+            노드 정보 조회
+          </li>
+        </ul>
+        <ul class="floor-list">
+          <li class="floor-item">4 floor</li>
+          <li class="floor-item">3 floor</li>
+          <li class="floor-item">2 floor</li>
+          <li class="floor-item">1 floor</li>
+          <li class="floor-item">B1 floor</li>
+          <li class="floor-item">B2 floor</li>
+        </ul>
+      </aside>
+      <main class="content">
+        <section id="sensor-data" class="content-section active">
+          <div class="buttons">
+            <button class="node-button" onclick="showNodeData('node1')">
+              노드1
+            </button>
+            <button class="node-button" onclick="showNodeData('node2')">
+              노드2
+            </button>
+            <button class="node-button" onclick="showNodeData('node3')">
+              노드3
+            </button>
+          </div>
+          <canvas id="sensorChart"></canvas>
+        </section>
+        <section id="node-info" class="content-section">
+          <!-- 노드 정보 조회 콘텐츠 추가 -->
+          <p>노드 정보 조회 페이지입니다.</p>
+        </section>
+      </main>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
